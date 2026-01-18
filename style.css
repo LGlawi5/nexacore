@@ -643,39 +643,45 @@ html {
 
     .menu-toggle {
         display: block;
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+        cursor: pointer;
+        user-select: none;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-toggle.active {
+        transform: rotate(90deg);
     }
 
     .nav-links {
-        display: none;
+        overflow: hidden;
+        max-height: 0;
         flex-direction: column;
         position: absolute;
         top: 65px;
         right: 20px;
         background: #081a2b;
         width: 200px;
-        padding: 15px;
+        padding: 0 15px;
         border-radius: 8px;
         box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        transition: max-height 0.4s ease;
     }
 
     .nav-links a {
         padding: 10px 0;
         border-bottom: 1px solid rgba(255,255,255,0.1);
+        display: block;
     }
 
     .nav-links.show {
-        display: flex;
+        max-height: 500px; /* allows smooth slide-down */
+        padding: 15px;
     }
 }
 
-
-.menu-toggle {
-    font-size: 30px;
-    font-weight: bold;
-    color: #ffffff;
-    cursor: pointer;
-    user-select: none;
-}
 
 
 
