@@ -589,11 +589,11 @@ html {
         border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-/* ================== NAVBAR ================== */
+/* Navbar */
 .navbar {
   background: #081a2b;
   padding: 15px 20px;
-  position: relative; /* important for absolute nav-links */
+  position: relative;
   z-index: 1000;
 }
 
@@ -607,57 +607,69 @@ html {
   height: 35px;
 }
 
-/* Desktop links */
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
 .nav-links a {
   color: #fff;
   text-decoration: none;
+  margin-left: 25px;
   font-size: 15px;
 }
 
-/* Hamburger toggle hidden on desktop */
+/* Hamburger */
 .menu-toggle {
   display: none;
-  font-size: 30px;
-  color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
   cursor: pointer;
-  user-select: none;
 }
 
-/* ------------ MOBILE VIEW ------------ */
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile view */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
-    display: block; /* always block for animation to work */
+    display: block;
     position: absolute;
-    top: 65px;
+    top: 60px;
     right: 20px;
     width: 200px;
-    max-height: 0; /* hidden initially */
+    max-height: 0;
     overflow: hidden;
-    flex-direction: column;
     background: #081a2b;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     transition: max-height 0.4s ease;
-    padding: 0 15px;
-  }
-
-  .nav-links.show {
-    max-height: 500px; /* enough to fit all links */
-    padding: 15px;
   }
 
   .nav-links a {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: block;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* When menu is open */
+  .nav-links.show {
+    max-height: 500px;
+  }
+
+  /* Hamburger animation to X */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
