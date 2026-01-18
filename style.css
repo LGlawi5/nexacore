@@ -637,7 +637,6 @@ html {
     color: #fff;
     cursor: pointer;
 }
-
 /* ------------ MOBILE VIEW ------------ */
 @media (max-width: 768px) {
 
@@ -648,11 +647,6 @@ html {
         color: #ffffff;
         cursor: pointer;
         user-select: none;
-        transition: transform 0.3s ease;
-    }
-
-    .menu-toggle.active {
-        transform: rotate(90deg);
     }
 
     .nav-links {
@@ -664,24 +658,23 @@ html {
         right: 20px;
         background: #081a2b;
         width: 200px;
-        padding: 0 15px;
+        padding: 0 15px; /* no padding initially */
         border-radius: 8px;
         box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-        transition: max-height 0.4s ease;
+        transition: max-height 0.5s ease, padding 0.5s ease;
     }
 
     .nav-links a {
         padding: 10px 0;
         border-bottom: 1px solid rgba(255,255,255,0.1);
         display: block;
+        color: #fff;
+        text-decoration: none;
     }
 
+    /* When menu is open */
     .nav-links.show {
-        max-height: 500px; /* allows smooth slide-down */
+        max-height: 500px; /* large enough for all links */
         padding: 15px;
     }
 }
-
-
-
-
