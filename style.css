@@ -672,4 +672,18 @@ html {
   .menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
+}.menu-toggle {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
 }
