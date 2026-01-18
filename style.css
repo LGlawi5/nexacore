@@ -669,6 +669,13 @@ html {
 }
 
 
+.menu-toggle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+}
 
 
 
