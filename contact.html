@@ -1,33 +1,41 @@
 ﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | NEXACORE</title>
+    
+    <title>OUTLIER | Contact </title>
     <link rel="stylesheet" href="style.css">
+    <script src="news-slider.js"></script>
+    <script src="menu.js"></script>
+    <script src="footer.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 <body>
+<body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="NEXACORE">
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="training.html">Training</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
+<!-- Header / Navbar -->
+<header class="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="OUTLIER Logo">
         </div>
-    </header>
+
+        <!-- Mobile menu icon -->
+        <div class="menu-toggle" id="menuToggle">☰</div>
+<nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="training.html">Training</a>
+    <a href="contact.html">Contact</a>
+</nav>
+    </div>
+</header>
+
 
     <!-- Page Banner -->
     <section class="page-banner">
@@ -69,29 +77,47 @@
             </div>
         </div>
     </section>
+     <!-- Footer -->
 
-    <!-- Footer -->
-    
-        <div class="footer-socials">
-            <a href="https://wa.me/234XXXXXXXXXX" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+    <footer class="site-footer">
+    <div class="footer-wave"></div>
 
-            <a href="https://facebook.com/yourpage" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
+    <div class="footer-icons">
+        <a href="tel:+2348012345678" class="icon phone" data-tooltip="Call" data-track="Phone">
+            <i class="fa-solid fa-phone"></i>
+        </a>
 
-            <a href="https://instagram.com/yourpage" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
+        <a href="https://wa.me/2348012345678" target="_blank" class="icon whatsapp" data-tooltip="WhatsApp" data-track="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-            <a href="https://linkedin.com/company/yourpage" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
+        <a href="https://instagram.com/yourusername" target="_blank" class="icon instagram" data-tooltip="Instagram" data-track="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
 
-        <p>© 2025 NEXACORE. All Rights Reserved.</p>
+        <a href="https://facebook.com/yourpage" target="_blank" class="icon facebook" data-tooltip="Facebook" data-track="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="icon linkedin" data-tooltip="LinkedIn" data-track="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://x.com/yourhandle" target="_blank" class="icon twitter" data-tooltip="X" data-track="X">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+    </div>
+
+    <p class="footer-copy">
+        © <span id="year"></span> NEXACORE. All Rights Reserved.
+    </p>
+</footer>
+<a href="https://wa.me/2348012345678" class="floating-whatsapp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 
 </body>
 </html>
+
 
